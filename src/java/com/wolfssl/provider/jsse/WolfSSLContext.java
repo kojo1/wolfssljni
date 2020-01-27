@@ -196,7 +196,7 @@ public class WolfSSLContext extends SSLContextSpi {
          * here if we're running on OpenJDK 1.7.0_201. */
         ArrayList<String> keyAlgos = new ArrayList<String>();
         if (WolfSSL.EccEnabled() && 
-            (!javaVersion.equals("1.7.0_201") || !javaVersion.equals("1.7.0_171"))) {
+            (!javaVersion.equals("1.7.0_201") && !javaVersion.equals("1.7.0_171"))) {
             keyAlgos.add("EC");
         }
         if (WolfSSL.RsaEnabled()) {
