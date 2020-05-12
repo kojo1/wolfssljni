@@ -65,6 +65,22 @@ JNIEXPORT void JNICALL Java_com_wolfssl_WolfSSLContext_setVerify
 
 /*
  * Class:     com_wolfssl_WolfSSLContext
+ * Method:    setOptions
+ * Signature: (JJ)J
+ */
+JNIEXPORT jlong JNICALL Java_com_wolfssl_WolfSSLContext_setOptions
+  (JNIEnv *, jobject, jlong, jlong);
+
+/*
+ * Class:     com_wolfssl_WolfSSLContext
+ * Method:    setOptions
+ * Signature: (JJ)J
+ */
+JNIEXPORT jlong JNICALL Java_com_wolfssl_WolfSSLContext_getOptions
+  (JNIEnv *, jobject, jlong);
+
+/*
+ * Class:     com_wolfssl_WolfSSLContext
  * Method:    memsaveCertCache
  * Signature: (J[BI[I)I
  */
@@ -85,6 +101,22 @@ JNIEXPORT jint JNICALL Java_com_wolfssl_WolfSSLContext_memrestoreCertCache
  * Signature: (J)I
  */
 JNIEXPORT jint JNICALL Java_com_wolfssl_WolfSSLContext_getCertCacheMemsize
+  (JNIEnv *, jobject, jlong);
+
+/*
+ * Class:     com_wolfssl_WolfSSLContext
+ * Method:    setCacheSize
+ * Signature: (JJ)J
+ */
+JNIEXPORT jlong JNICALL Java_com_wolfssl_WolfSSLContext_setCacheSize
+  (JNIEnv *, jobject, jlong, jlong);
+
+/*
+ * Class:     com_wolfssl_WolfSSLContext
+ * Method:    getCacheSize
+ * Signature: (J)J
+ */
+JNIEXPORT jlong JNICALL Java_com_wolfssl_WolfSSLContext_getCacheSize
   (JNIEnv *, jobject, jlong);
 
 /*
@@ -126,6 +158,14 @@ JNIEXPORT jint JNICALL Java_com_wolfssl_WolfSSLContext_usePrivateKeyBuffer
  */
 JNIEXPORT jint JNICALL Java_com_wolfssl_WolfSSLContext_useCertificateChainBuffer
   (JNIEnv *, jobject, jlong, jbyteArray, jlong);
+
+/*
+ * Class:     com_wolfssl_WolfSSLContext
+ * Method:    useCertificateChainBufferFormat
+ * Signature: (J[BJI)I
+ */
+JNIEXPORT jint JNICALL Java_com_wolfssl_WolfSSLContext_useCertificateChainBufferFormat
+  (JNIEnv *, jobject, jlong, jbyteArray, jlong, jint);
 
 /*
  * Class:     com_wolfssl_WolfSSLContext
